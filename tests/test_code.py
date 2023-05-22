@@ -46,6 +46,8 @@ def test_hide_information_from():
     assert main.code.hide_information_from({"description": "Перевод организации",
                                             "from": "Счет 17691325653939384901"}) == "Счет 1769 13** **** **** 4901"
     assert main.code.hide_information_from({"description": "Открытие вклада"}) == ""
+    assert main.code.hide_information_from({"description": "Перевод с карты на счет",
+                                            "from": "MasterCard 8847384717023026"}) == "MasterCard 8847 38** **** 3026"
 
 
 def test_hide_information_to():
